@@ -49,7 +49,7 @@ export const WeatherApp = () => {
     humidity[0].innerHTML = data.main.humidity+" %";
     wind[0].innerHTML = data.wind.speed+" km/h";
     temperature[0].innerHTML = data.main.temp+"°c";
-    location[0].innerHTML = data.name;
+    location[0].innerHTML = data.name + ", " + data.sys.country + ", " + data.weather[0].description;
 
     if(data.weather[0].icon==='01d' || data.weather[0].icon==='01n')
     {
