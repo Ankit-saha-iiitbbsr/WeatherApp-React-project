@@ -52,11 +52,11 @@
     justify-content: center;
     color: white;
     font-size: 60px;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .data-container{
-    margin-top: 50px;
+    margin-top: 38px;
     color: white;
     display: flex;
     justify-content: center;
