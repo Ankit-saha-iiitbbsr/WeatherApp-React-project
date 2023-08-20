@@ -35,6 +35,16 @@ export const WeatherApp = () => {
     const temperature = document.getElementsByClassName("weather-temp");
     const location = document.getElementsByClassName("weather-location");
 
+    if(data.message === "city not found" || data.cod === '404')
+    {
+      setWicon(error_icon);
+      humidity[0].innerHTML = "Not Found";
+      wind[0].innerHTML = "Not Found";
+      temperature[0].innerHTML = "Null";
+      location[0].innerHTML = data.cod + " " + data.message;
+      return;
+    }
+
     humidity[0].innerHTML = data.main.humidity+" %";
     wind[0].innerHTML = data.wind.speed+" km/h";
     temperature[0].innerHTML = data.main.temp+"°c";
