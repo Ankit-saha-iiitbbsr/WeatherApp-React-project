@@ -11,6 +11,7 @@ import rain_icon from '../Assets/rain.png';
 import snow_icon from '../Assets/snow.png';
 import wind_icon from '../Assets/wind.png';
 import mist2_icon from '../Assets/mist2 (1).png';
+import error_icon from '../Assets/404.png';
 //import haze_icon from '../Assets/haze (1).png';
 //import fog_icon from '../Assets/fog.png';
 
@@ -22,7 +23,7 @@ export const WeatherApp = () => {
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput");
-    if(element[0].value ==="")
+    if(element[0].value === "")
     {
       return 0;
     }
@@ -82,6 +83,10 @@ export const WeatherApp = () => {
     {
       setWicon(mist2_icon);
     }
+    /*else if(data.message === "city not found" || data.cod === '404')
+    {
+      setWicon(error_icon);
+    }*/
     else{
       setWicon(clear_icon);
     }
